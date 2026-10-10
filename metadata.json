@@ -1,0 +1,6 @@
+{
+  "name": "Sociasport MVP",
+  "description": "Gamified sports and lifestyle super app featuring Roblox-style 3D avatar progression and Point Blank-style tactical multiplayer lobbies.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

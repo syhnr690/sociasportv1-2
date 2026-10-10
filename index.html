@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sociasport MVP</title>
+    <meta name="description" content="Gamified sports and lifestyle super app featuring Roblox-style 3D avatar progression and Point Blank-style tactical multiplayer lobbies." />
+    <meta property="og:title" content="Sociasport MVP" />
+    <meta property="og:description" content="Gamified sports and lifestyle super app featuring Roblox-style 3D avatar progression and Point Blank-style tactical multiplayer lobbies." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,600;0,700;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Teko:wght@500;600;700&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        try {
+          var _origFetch = (typeof window !== 'undefined' && typeof window.fetch === 'function') 
+            ? window.fetch.bind(window) 
+            : undefined;
+          
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return _origFetch;
+            },
+            set: function(fn) {
+              _origFetch = fn;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          // fallback silent
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-[#121212] text-white selection:bg-[#CCFF00] selection:text-black antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

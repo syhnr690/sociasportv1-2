@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+:root {
+  --bg-app: #121212;
+  --bg-card: #24242A;
+  --bg-card-hover: #2C2C34;
+  --bg-subtle: #1A1A1F;
+  --text-main: #FFFFFF;
+  --text-muted: #9E9E9E;
+  --border-app: rgba(158, 158, 158, 0.1);
+  --accent-lime: #CCFF00;
+  --accent-blue: #3D4BFF;
+}
+
+.theme-day {
+  --bg-app: #F5F7FA;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F8FAFC;
+  --bg-subtle: #EDF2F7;
+  --text-main: #0F172A;
+  --text-muted: #64748B;
+  --border-app: rgba(15, 23, 42, 0.1);
+  --accent-lime: #16A34A;
+  --accent-blue: #2563EB;
+}
+
+.theme-day body {
+  background-color: #F5F7FA;
+  color: #0F172A;
+}
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Chakra Petch', sans-serif;
+  }
+
+  .font-cyber {
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 0.05em;
+  }
+}
+
+
+/* Custom Tactical & Gaming Utilities */
+.neon-border-lime {
+  box-shadow: 0 0 15px rgba(204, 255, 0, 0.35), inset 0 0 10px rgba(204, 255, 0, 0.15);
+}
+
+.neon-border-blue {
+  box-shadow: 0 0 15px rgba(61, 75, 255, 0.35), inset 0 0 10px rgba(61, 75, 255, 0.15);
+}
+
+.neon-glow-lime {
+  filter: drop-shadow(0 0 8px rgba(204, 255, 0, 0.6));
+}
+
+.neon-glow-blue {
+  filter: drop-shadow(0 0 8px rgba(61, 75, 255, 0.6));
+}
+
+.bg-grid-pattern {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.bg-pb-dots {
+  background-image: radial-gradient(rgba(204, 255, 0, 0.15) 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #24242A;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3D4BFF;
+}
+
+/* Glassmorphism Blob Animations */
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 10s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+

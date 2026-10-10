@@ -1,0 +1,67 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile with gamified level, stats, and gear",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string", "maxLength": 50 },
+        "level": { "type": "number" },
+        "xp": { "type": "number" },
+        "sociacoins": { "type": "number" },
+        "role": { "type": "string" },
+        "partnerBusinessName": { "type": "string" },
+        "onboardingCompleted": { "type": "boolean" }
+      },
+      "required": ["uid"]
+    },
+    "PartnerVenue": {
+      "title": "PartnerVenue",
+      "description": "Registered sports arena and court partner details",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "ownerId": { "type": "string" },
+        "name": { "type": "string", "maxLength": 100 },
+        "sport": { "type": "string" },
+        "city": { "type": "string" },
+        "fullAddress": { "type": "string", "maxLength": 300 },
+        "priceStartFrom": { "type": "number" },
+        "contactPhone": { "type": "string", "maxLength": 25 },
+        "bankAccount": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["id", "ownerId", "name", "sport"]
+    },
+    "Booking": {
+      "title": "Booking",
+      "description": "Court reservation booking record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "bookingCode": { "type": "string" },
+        "venueId": { "type": "string" },
+        "venueName": { "type": "string" },
+        "totalPrice": { "type": "number" },
+        "paymentStatus": { "type": "string" }
+      },
+      "required": ["id", "userId", "bookingCode", "venueId"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles and player game progress"
+    },
+    "/partnerVenues/{venueId}": {
+      "schema": "PartnerVenue",
+      "description": "Sports venue partner listings"
+    },
+    "/bookings/{bookingId}": {
+      "schema": "Booking",
+      "description": "User court reservations"
+    }
+  }
+}
